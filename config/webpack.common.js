@@ -168,6 +168,7 @@ module.exports = function (options) {
           exclude: [helpers.root('src', 'styles')]
         },
 
+
         /* Raw loader support for *.html
          * Returns file content as string
          *
@@ -192,6 +193,13 @@ module.exports = function (options) {
         { 
           test: /\.(eot|woff2?|svg|ttf)([\?]?.*)$/,
           use: 'file-loader'
+        },
+
+        /* Adding font loader for custom fonts
+        */
+        { 
+                  test: /\.(woff2?|ttf|eot|svg)$/, 
+                  loader: 'url-loader?limit=10000' 
         }
 
       ],

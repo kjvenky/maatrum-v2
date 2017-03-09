@@ -24,6 +24,7 @@ import { XLargeDirective } from './x-large';
 export class HomeComponent implements OnInit {
   // Set our default values
   public localState = { value: '' };
+  public date: Date = new Date();
   // TypeScript public modifiers
   constructor(
     public appState: AppState,

@@ -18,6 +18,9 @@ import {
   AlertModule,
   DatepickerModule
 } from 'ng2-bootstrap';
+import {
+  MaatrumGlobalModule
+} from './components/index'
 
 /*
  * Platform and Environment providers/directives/pipes
@@ -57,15 +60,13 @@ type StoreType = {
   bootstrap: [ AppComponent ],
   declarations: [
     AppComponent,
-    AboutComponent,
     HomeComponent,
-    NoContentComponent,
-    XLargeDirective
   ],
   imports: [ // import Angular's modules
     BrowserModule,
     FormsModule,
     HttpModule,
+    MaatrumGlobalModule,
     AlertModule.forRoot(),
     DatepickerModule.forRoot(),
     RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules })
